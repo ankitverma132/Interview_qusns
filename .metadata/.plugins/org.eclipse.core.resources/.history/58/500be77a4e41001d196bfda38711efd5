@@ -1,0 +1,61 @@
+
+public class shortestSubsequence {
+
+	public static void main(String[] args) {
+
+	}
+
+	public static int solve(String S,String V){
+
+		int storage[][] = new int[S.length() + 1][V.length() + 1];
+		for( int i = 0; i < S.length() + 1; i++ ) {
+			for( int j = 0; j < V.length() + 1; j++ ) {
+				storage[i][j] = -1;
+			}
+		}
+		return solveM( S, V, storage );
+	}
+
+	private static int solveM(String s, String v, int[][] storage) {
+
+		int m = s.length();
+		int n = v.length();
+
+		if(m == 0 ) {
+			storage[m][n] =  MAX;
+			return storage[m][n];
+		}
+		if( v.length() <= 0 ) {
+			storage[m][n] =  1;
+
+			return storage[m][n];
+		}
+		if( storage[m][n] != -1 ) {
+			return storage[m][n];
+		}
+		//If shortest subsequence does't include
+		//first character of string S
+		int op1 = solveM( s.substring(1), v, storage );
+
+		//If includes
+
+		int index;
+		for( index = 0; index < v.length(); index++ ) {
+			if( v.charAt(index) == s.charAt(0) ) {
+				break;
+			}
+		}
+		int op2 = 1;
+		if( index == v.length() ) {
+			storage[m][n] =  1;
+			return storage[m][n];
+		}
+		else {
+			//ie character found in V
+			op2 = 1 +  solveM( s.substring(1), v.substring(index+1),storage);
+		}
+		storage[m][n] =  Math.min(op1, op2);
+		return storage[m][n];
+	}
+
+}
