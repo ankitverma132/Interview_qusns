@@ -1,0 +1,164 @@
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+
+public class PriorityQueueUse {
+
+	public static void main(String[] args) throws PriorityQueueException {
+
+// =============================================================================
+		// It is also Called heap sort.
+		// Time complexity O(nlogn) space complexity O(n)
+
+		Min_Priority_Queue pq = new Min_Priority_Queue();
+		int temp[] = { 5, 1, 9, 2, 0 };
+
+		for (int i = 0; i < temp.length; i++) { // O(nlogn) for insertion
+			pq.insert(temp[i]);
+		}
+
+		while (!pq.isEmpty()) { // O(nlogn) for deletion
+			System.out.println(pq.removeMin());
+		}
+
+		System.out.println();
+
+// ==============================================================================
+
+		// Heap sort without using extra space
+		int arr[] = { 5, 1, 9, 2, 0, 6 };
+		for (int i = 0; i < arr.length; i++) {
+			// inserting each element in heap one by one
+			insertIntoVirtualHeap(arr, i);
+		}
+		//Now we have min element at 0th index and it is an heap now
+
+		// now remove each element one by one from heap
+		for (int i = 0; i < arr.length; i++) {
+			// removing each element from heap one by one
+			arr[arr.length - 1 - i] = removeMinIntoVirtualHeap(arr, arr.length - i);
+		}
+
+		// now our array is stored in form of
+		// heap having min element at first
+		for (int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+
+	}
+
+	// for min-heap/ descending order
+	private static void insertIntoVirtualHeap(int[] arr, int i) {
+		
+		int childIndex = i;
+		int parentIndex = (childIndex - 1) / 2;
+		//Up heapify
+		while (childIndex > 0) {
+			if (arr[childIndex] < arr[parentIndex]) { // compare(o1,o2) < 0
+				// perform up-heapify
+				// swap
+				int temp = arr[childIndex];
+				arr[childIndex] = arr[parentIndex];
+				arr[parentIndex] = temp;
+				// update
+				childIndex = parentIndex;
+				parentIndex = (childIndex - 1) / 2;
+			} else {
+				return;
+			}
+		}
+	}
+
+	private static int removeMinIntoVirtualHeap(int[] arr, int heapSize) {
+		int temp = arr[0];
+		arr[0] = arr[heapSize - 1];
+		heapSize--;
+		// now down-heapify
+		int index = 0;
+		int leftChildIndex = 2 * index + 1;
+		int rightChildIndex = 2 * index + 2;
+
+		while (leftChildIndex < heapSize) {
+
+			int minIndex = index;
+			if (arr[leftChildIndex] < arr[minIndex]) {
+				minIndex = leftChildIndex;
+			}
+			if (rightChildIndex < heapSize && arr[rightChildIndex] < arr[minIndex]) {
+				minIndex = rightChildIndex;
+			}
+			if (minIndex != index) {
+				// swap
+				int temp1 = arr[index];
+				arr[index] = arr[minIndex];
+				arr[minIndex] = temp1;
+				index = minIndex;
+				leftChildIndex = 2 * index + 1;
+				rightChildIndex = 2 * index + 2;
+			} else {
+				break;
+			}
+		}
+		return temp;
+	}
+
+//=============================================================================		
+	// By default priority queue provide by java is Min Priority queue
+
+	/*
+	 * You are given with an integer k and an array of integers that contain numbers
+	 * in random order. Write a program to find k largest numbers from given array.
+	 * You need to save them in an array and return it. Time complexity should be
+	 * O(nlogk) and space complexity should be not more than O(k).
+	 */
+	/*
+	 * Sample Input : 2 12 9 16 10 5 3 20 25 11 1 8 6 Sample Output : 12 16 20 25
+	 */
+	public static ArrayList<Integer> kLargest(int input[], int k) {
+
+		// Time complexity- O(nlogk) and space complexity - O(k).
+		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+		ArrayList<Integer> output = new ArrayList<>();
+
+		for (int i = 0; i < k; i++) {
+			pq.add(input[i]);
+		}
+		for (int i = k; i < input.length; i++) {
+			if (pq.peek() < input[i]) {
+				pq.remove();
+				pq.add(input[i]);
+			}
+		}
+		while (!pq.isEmpty()) {
+			output.add(pq.remove());
+		}
+		return output;
+	}
+
+//====================================================================================	
+	/*
+	 * Given an array A of random integers and an integer k, find and return the kth
+	 * largest element in the array. Note: Try to do this question in less than O(N
+	 * * logN) time.
+	 */
+	public static int kthLargest(int arr[], int k) {
+
+		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();
+
+		for (int i = 0; i < k; i++) {
+			pq.add(arr[i]);
+		}
+		for (int i = k; i < arr.length; i++) {
+			if (pq.peek() < arr[i]) {
+				pq.remove();
+				pq.add(arr[i]);
+			}
+		}
+		return pq.peek();
+
+	}
+//======================================================================================	
+}

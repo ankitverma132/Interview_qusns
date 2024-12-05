@@ -10,11 +10,16 @@ abc
 dc
 Sample Output 1 :
 2*/
+
+/*Input:   str1 = “sunday”, str2 = “saturday”
+Output:  3
+Explanation: Last three and first characters are same.  We basically need to convert “un” to “atur”. 
+This can be done using below three operations. Replace ‘n’ with ‘r’, insert t, insert a*/
 public class editDistance {
 
 	public static void main(String[] args) {
-		String s1 = "abc";
-		String s2 = "dc";
+		String s1 = "sunday";
+		String s2 = "saturday";
 		System.out.print(editDistance(s1, s2));
 
 	}

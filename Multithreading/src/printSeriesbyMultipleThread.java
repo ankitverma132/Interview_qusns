@@ -16,10 +16,14 @@ public class printSeriesbyMultipleThread extends Thread {
 
 		printSeriesbyMultipleThread t1 = new printSeriesbyMultipleThread();
 		printSeriesbyMultipleThread t2 = new printSeriesbyMultipleThread();
+		printSeriesbyMultipleThread t3 = new printSeriesbyMultipleThread();
 		t1.start();
 		t1.join();
 
 		t2.start();
+		t2.join();
+
+		t3.start();
 
 	}
 

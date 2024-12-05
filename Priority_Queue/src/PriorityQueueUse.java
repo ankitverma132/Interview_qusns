@@ -52,10 +52,9 @@ public class PriorityQueueUse {
 
 	// for min-heap/ descending order
 	private static void insertIntoVirtualHeap(int[] arr, int i) {
-
+		
 		int childIndex = i;
 		int parentIndex = (childIndex - 1) / 2;
-
 		while (childIndex > 0) {
 			if (arr[childIndex] < arr[parentIndex]) { // compare(o1,o2) < 0
 				// perform up-heapify

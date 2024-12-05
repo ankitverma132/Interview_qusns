@@ -1,3 +1,14 @@
+/*Priority Queue:
+	- Priority Queue Internal Working(Using Heap & Heap properties)
+	- Implementation of Max Heap & Min Heap
+	- Checking If Array is Max Heap
+	- Heap Sort(With Extra space)
+	- Inplace Heap sort(Without Extra space : Using Virtual Space)
+	- K largest elements of a array
+	- Kth largest element of a array*/
+	
+
+
 //Given an array of integers, check whether it represents max-heap or not. 
 public class CheckMaxHeap {
 
