@@ -1,0 +1,12 @@
+
+//Remove duplicates from stream and return in same order
+public class RemoveDuplicates {
+	String str =  "dabcadefg";
+	
+//	In Java 8, mapToObj is a method available in the primitive streams 
+//	(IntStream, LongStream, DoubleStream) to map each element of the stream to an object.
+//	This is particularly useful when you need to transform
+//	primitive values into their corresponding object forms or other complex types.
+	str.chars().distinct().mapToObj(item -> (char) item)
+
+}

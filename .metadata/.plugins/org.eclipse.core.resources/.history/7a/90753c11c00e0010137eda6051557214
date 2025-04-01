@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Comparator;
+// Find the word that has the second highest length or nth highest length
+public class SecondHighestLength {
+	public static void main(String[] args) {
+		String str = "I am learning Streams API in java";
+//		1. Using Natural Order
+//		Stream<T> sorted()
+		
+//		2. Using a Custom Comparator
+//		Stream<T> sorted(Comparator<? super T> comparator)
+		
+//		Parameters:
+//		comparator (optional): A Comparator to compare elements of the stream.
+		
+//		Returns:
+//		A new Stream consisting of the elements of the original stream, 
+//		sorted according to the specified order.
+		
+//		Throws:
+//		This method does not throw any exceptions.
+        String ans = ((Comparator) Arrays.stream(str.split(" "))
+        				   .sorted(Comparator.comparing(String :: length)))
+        				   .reversed().skip(1).findFirst().get();
+        System.out.println(ans);
+	}
+
+}

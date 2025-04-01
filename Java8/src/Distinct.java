@@ -9,6 +9,9 @@ public class Distinct {
 		System.out.println("The distinct elements are :");
 
 		// Displaying the distinct elements in the list using Stream.distinct() method
+
+		// The distict() is one such stateful intermediate operation that uses the state 
+		// from previously seen elements from the Stream while processing the new items.
 		list.stream().distinct().forEach(System.out::println);
 
 	}

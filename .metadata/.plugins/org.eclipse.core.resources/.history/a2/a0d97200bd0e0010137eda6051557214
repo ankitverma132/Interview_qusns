@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class MaxLengthWord {
+
+	public static void main(String[] args) {
+		String str = "I am learning java";
+
+		
+		//Optional<T> max(Comparator<? super T> comparator)
+        String ans = Arrays.stream(str.split(" ")).max(Comparator.comparing(String :: length)).get();
+        System.out.println(ans);
+	}
+
+}

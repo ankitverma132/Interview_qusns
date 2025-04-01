@@ -1,0 +1,23 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class MaxLengthWord {
+
+	public static void main(String[] args) {
+		String str = "I am learning java";
+
+		//The max() method is a terminal operation. So the Stream cannot 
+		// be used after this method has been executed.
+		
+		// The method argument shall be a non-interfering, stateless Comparator.
+		
+		// The method returns an Optional describing the maximum element of this 
+		// stream, or an empty Optional if the stream is empty.
+		// It may throw NullPointerException if the maximum element is null.
+		
+		// Optional<T> max(Comparator<? super T> comparator)
+        String ans = Arrays.stream(str.split(" ")).max(Comparator.comparing(String :: length)).get();
+        System.out.println(ans);
+	}
+
+}
