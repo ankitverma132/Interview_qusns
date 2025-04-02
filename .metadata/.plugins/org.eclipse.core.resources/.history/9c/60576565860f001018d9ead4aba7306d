@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class OccurenceOfEachWord {
+	public static void main(String[] args) {
+		String str = "I am learning Streams API in java java";
+//		The static factory methods Collectors.groupingBy() provide us with functionality similar 
+//		to the ‘GROUP BY’ clause in the SQL language. 
+//		We use them for grouping objects by some property and storing results in a Map instance.
+		
+		
+//		Function.identity() Key Points:
+//		- It's often used in scenarios where a function is expected, but you want
+//		to make no changes to the data.
+//
+//			- Commonly utilized in Java Streams, especially with methods like map()
+//		when no transformation is required.
+//
+//			- It returns a singleton instance.
+		Map<String,Long> map = Arrays.stream(str.split(" "))
+		.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+		System.out.println(map);
+	}
+}
