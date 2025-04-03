@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
+public class DivideGivenList {
+	public static void main(String[] args) {
+		 int[] intArray = {1, 2, 3, 4, 5};
+
+	        // Using boxed to convert IntStream to Stream<Integer>
+	        List<Integer> integerList = IntStream.of(intArray)
+	                                           .boxed()
+	                                           .collect(Collectors.toList());
+
+	        // Print the list of boxed integers
+	        System.out.println(integerList);
+	}
+}

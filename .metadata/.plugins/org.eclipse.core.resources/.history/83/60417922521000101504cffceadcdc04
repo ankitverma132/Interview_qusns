@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+public class OccurenceOfEachChar {
+
+	public static void main(String[] args) {
+
+		String str = "Missing";
+
+	    String ans = Arrays.stream(str.split(" "))
+	    				   .max(Comparator.comparing(String :: length))
+	    				   .get();
+	    System.out.println(ans);
+	}
+}
