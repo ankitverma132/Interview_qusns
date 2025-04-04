@@ -1,0 +1,9 @@
+
+public class FirstRepeatingChar {
+
+	public static void main(String[] args) {
+		// Given a string, find the first repeated character
+
+	}
+
+}

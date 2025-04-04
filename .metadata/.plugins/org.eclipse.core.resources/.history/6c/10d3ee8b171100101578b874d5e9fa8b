@@ -1,0 +1,21 @@
+import java.util.Arrays;
+
+public class SumUniqueElement {
+	// Given an array, find the sum of unique elements
+	public static void main(String[] args) {
+		int[] arr = {1,6,7,8,8,1,1,7};
+		// we can apply the sum() method to  IntStream:
+		int result = Arrays.stream(arr).distinct().sum();
+		System.out.println(result);
+		
+
+		int[] arr2 = {1,6,5};
+		//IntStream.average() returns an OptionalDouble that may not contain 
+		//a value and needs special handling.
+		Double avg = Arrays.stream(arr2).distinct().average().orElse(Double.NaN);
+		System.out.println(avg);
+	}
+	
+	
+
+}

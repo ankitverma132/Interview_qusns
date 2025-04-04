@@ -1,0 +1,18 @@
+import java.util.Arrays;
+
+public class SumUniqueElement {
+	// Given an array, find the sum of unique elements
+	public static void main(String[] args) {
+		int[] arr = {1,6,7,8,8,1,1,7};
+		int result = Arrays.stream(arr).distinct().sum();
+		System.out.println(result);
+		
+
+		int[] arr2 = {1,6,5};
+		int avg = Arrays.stream(arr).distinct().sum();
+		System.out.println(result);
+	}
+	
+	
+
+}

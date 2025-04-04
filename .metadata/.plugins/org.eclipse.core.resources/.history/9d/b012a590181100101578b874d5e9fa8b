@@ -1,0 +1,14 @@
+import java.util.Arrays;
+
+public class FirstNonRepeatingChar {
+	//Given a string, find the first non-repeated character
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String str = "Hello World";
+		
+		String ans = Arrays.stream(str.split("")).filter(c -> str.indexOf(c) == str.lastIndexOf(c)).findFirst().get();
+
+	}
+
+}

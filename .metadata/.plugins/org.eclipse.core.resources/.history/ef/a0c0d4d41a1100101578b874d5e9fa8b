@@ -1,0 +1,17 @@
+import java.util.Arrays;
+
+public class FirstRepeatingChar {
+
+	public static void main(String[] args) {
+		// Given a string, find the first repeated character
+		
+		String str = "Hello World";
+		String ans = Arrays.stream(str.split(""))
+				.filter(c -> str.indexOf(c) == str.lastIndexOf(c))
+				.findFirst().get();
+		
+		System.out.println(ans);
+
+	}
+
+}
