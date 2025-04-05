@@ -1,0 +1,10 @@
+
+public class ProductOfFirstTwoElement {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+// Find the products of the first two elements in an array
+		int[] arr = {2,9,10,3,7};
+	}
+
+}
