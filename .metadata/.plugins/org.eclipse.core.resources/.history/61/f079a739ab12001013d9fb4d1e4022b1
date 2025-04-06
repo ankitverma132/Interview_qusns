@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class PairAngram {
+
+	public static void main(String[] args) {
+		//  Group /Pair anagrams from a list of Strings. For 1 word consider only 1 anagram
+		
+		String[] arr = {"pat", "tap", "pan", "nap", "team", "tree", "meat"};
+		List<String> list = Arrays.asList(arr);
+		list.stream().collect(Collectors.groupingBy(x -> Arrays.stream(x.toLowerCase().split("")).sorted().
+				collect(Collectors.toList())));
+	}
+
+}

@@ -1,0 +1,10 @@
+
+public class MultiplyAlternate {
+
+	public static void main(String[] args) {
+		//  Write a stream program to multiply alternative numbers in an array
+		int[] arr = {4,5,1,7,2,9,2};
+
+	}
+
+}

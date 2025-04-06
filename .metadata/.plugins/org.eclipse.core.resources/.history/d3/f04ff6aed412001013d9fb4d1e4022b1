@@ -1,0 +1,9 @@
+
+public class FirstLastElement {
+
+	public static void main(String[] args) {
+		//  Write a program to multiply 1st and last element, 2nd and 2nd last element etc.
+
+	}
+
+}
