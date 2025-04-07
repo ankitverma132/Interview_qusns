@@ -1,0 +1,9 @@
+
+public class GroupBasedOnMiddle {
+// Given the string[] group the strings based on the middle character
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] arr = {"ewe", "jji", "jhj", "kwk", "aha"};
+	}
+
+}

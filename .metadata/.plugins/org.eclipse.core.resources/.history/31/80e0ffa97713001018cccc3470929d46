@@ -1,0 +1,12 @@
+
+public class IsDistinctvalues {
+
+	public static void main(String[] args) {
+		//  In a given array of integers, return true if it contains distinct values
+		int[] arr = {5,0,1,8,0,0,7};
+		
+		//False as zero is repeated
+
+	}
+
+}

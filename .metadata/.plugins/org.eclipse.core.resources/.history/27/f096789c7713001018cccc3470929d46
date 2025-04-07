@@ -1,0 +1,9 @@
+
+public class IsDistinctvalues {
+
+	public static void main(String[] args) {
+		//  In a given array of integers, return true if it contains distinct values
+
+	}
+
+}

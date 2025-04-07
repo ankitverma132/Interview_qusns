@@ -1,0 +1,10 @@
+
+public class MoveZeroInFront {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {5,0,1,8,0,0,7};
+
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class MoveZeroInFront {
+	// Write a stream program to move all zero’s to beginning of array
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] arr = {5,0,1,8,0,0,7};
+		
+		//Method 1: create a list of zero and an list og no-zeros and merge them
+
+	}
+
+}

@@ -1,0 +1,21 @@
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class GroupBasedOnMiddle {
+// Given the string[] group the strings based on the middle character
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] arr = {"ewe", "jji", "jhj", "kwk", "aha"};
+		
+		//String middleChar = "ewe".substring(1,2);
+		//w
+		Map<Object, List<String>> ans = Stream.of(arr)
+				.collect(Collectors.groupingBy(x -> x.toString().substring(1,2)));
+		System.out.println(ans);
+		
+		//{w=[ewe, kwk], h=[jhj, aha], j=[jji]}
+	}
+
+}
