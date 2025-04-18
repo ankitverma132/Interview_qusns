@@ -1,0 +1,29 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class MultiplyArray {
+	public static void main(String[] args) {
+		// Multiply array elements
+		Integer[] arr = {1,2,3,4,5};
+		List<Integer> arrList = Arrays.asList(arr);
+		//arrList.add(1); //java.lang.UnsupportedOperationException
+		// We can not add any new number in arraylist here because internally it is array
+		
+		Optional<Integer> ans = arrList.stream().reduce((a,b)->a*b);
+		Introduction
+		The Stream.reduce() method in Java is used to perform a reduction operation
+		on the elements of a stream. It combines the stream elements into a single result 
+		by repeatedly applying a binary operation (such as addition, multiplication, or concatenation).
+
+		reduce() Method Syntax
+		1. Using a BinaryOperator
+		Optional<T> reduce(BinaryOperator<T> accumulator)
+		if(ans.isPresent()) {
+			System.out.println(ans);
+			System.out.println(ans.get());
+//			Optional[120]
+//			120
+		}
+	}
+}

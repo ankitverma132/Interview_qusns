@@ -1,0 +1,9 @@
+
+public class UppercaseConcat {
+
+	public static void main(String[] args) {
+		//  Convert a list of string to uppercase and then concatenate
+
+	}
+
+}

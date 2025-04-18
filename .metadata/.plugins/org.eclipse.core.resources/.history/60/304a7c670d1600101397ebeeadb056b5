@@ -1,0 +1,9 @@
+
+public class StringToUppercasee {
+
+	public static void main(String[] args) {
+		// Convert a list of strings to uppercase
+
+	}
+
+}

@@ -1,0 +1,15 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class RemoveNonNumeric {
+
+	public static void main(String[] args) {
+		//  Remove all non-numeric characters from a list.
+
+		List<String> list = Arrays.asList("a1b2c3", "1a2b3c", "123abc");
+		
+		
+
+	}
+
+}

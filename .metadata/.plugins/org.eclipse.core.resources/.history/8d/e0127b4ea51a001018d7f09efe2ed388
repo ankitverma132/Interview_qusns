@@ -1,0 +1,16 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class GroupByFirstChar {
+
+	public static void main(String[] args) {
+		// Group list of strings by their first character and count the number of strings
+		
+		
+		List<String> fruits = Arrays.asList("apple", "banana", "apricot", "cherry", "avacado");
+		
+		
+
+	}
+
+}

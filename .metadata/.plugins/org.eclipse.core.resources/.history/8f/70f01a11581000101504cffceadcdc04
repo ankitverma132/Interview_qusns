@@ -1,8 +1,0 @@
-
-public class ArrangeNumbers {
-//	Arrange the numbers in Descending/Ascending Order
-	public static void main(String[] args) {
-		
-	}
-
-}

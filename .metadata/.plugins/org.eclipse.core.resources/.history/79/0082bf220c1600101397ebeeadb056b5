@@ -1,0 +1,9 @@
+
+public class RemoveNonNumeric {
+
+	public static void main(String[] args) {
+		//  Remove all non-numeric characters from a list.
+
+	}
+
+}

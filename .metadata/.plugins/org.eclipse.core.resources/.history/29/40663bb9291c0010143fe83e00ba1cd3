@@ -1,0 +1,13 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class NameStartWiithA {
+
+	public static void main(String[] args) {
+		// Find name start with A and there count
+		
+		List<String> names = Arrays.asList("Ema", "Bob", "Alica", "Anna");
+
+	}
+
+}

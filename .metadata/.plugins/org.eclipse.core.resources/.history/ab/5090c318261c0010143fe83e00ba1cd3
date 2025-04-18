@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class FetchPerson {
+
+	public static void main(String[] args) {
+		//Given list of persons,fetch list of names of person
+		// Whose age is greater then 30, name should be unique and in sorted order
+
+		PersonObject p1 = new PersonObject("amit", "Pune", 22);
+		PersonObject p2 = new PersonObject("sumit", "kolkata", 27);
+		PersonObject p3 = new PersonObject("lalit", "Pune", 33);
+		PersonObject p4 = new PersonObject("kapil", "Pune", 38);
+		PersonObject p5 = new PersonObject("Danish", "Pune", 48);
+		List<PersonObject> list = new ArrayList<>();
+		list.add(p1);
+		list.add(p2);
+		list.add(p3);
+		list.add(p4);
+		list.add(p5);
+		//Bad practice
+		List<String> ans = list.stream()
+				.filter(x->x.getAge()>30)
+				.map(PersonObject::getName).distinct()
+				.sorted().collect(Collectors.toList());
+		System.out.println(ans);
+		
+//		Good practice
+		List<String> filteredNames = list.stream()
+				.filter(x->x.getAge()>30)
+				.map(PersonObject::getName).collect(Collectors.toList());
+		System.out.println(filteredNames);
+		List<String> uniqueSortedNames = list.stream()
+				.distinct()
+				.sorted()
+				.collect(Collectors.toList());
+		
+		
+		
+		
+
+	}
+
+}

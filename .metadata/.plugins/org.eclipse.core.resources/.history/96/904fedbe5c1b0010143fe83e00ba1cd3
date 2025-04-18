@@ -1,0 +1,33 @@
+import java.util.List;
+
+class PersonObject2 {
+	String name;
+	List<String> city;
+	
+	public PersonObject2(String name, List<String> city) {
+		super();
+		this.name = name;
+		this.city = city;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public List<String> getCity() {
+		return city;
+	}
+	public void setCity(List<String> city) {
+		this.city = city;
+	}
+	
+}
+public class MapVsFlatMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

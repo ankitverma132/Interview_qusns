@@ -1,0 +1,13 @@
+class Employee {
+	private String name;
+	private String email;
+	
+}
+public class OccuranceOfDomain {
+
+	public static void main(String[] args) {
+		// Find the occurrence of domains using Java streams 
+
+	}
+
+}

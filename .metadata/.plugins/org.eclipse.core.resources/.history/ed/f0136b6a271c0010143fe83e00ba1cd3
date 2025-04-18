@@ -1,0 +1,50 @@
+class Product {
+	int id;
+	String brand;
+	int price;
+	String name;
+	public Product(int id, String brand, int price, String name) {
+		super();
+		this.id = id;
+		this.brand = brand;
+		this.price = price;
+		this.name = name;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
+}
+public class ProductQusns {
+
+	public static void main(String[] args) {
+
+		Product p1 = new Product(1,"Lifeboy", 22, "Pune");
+		Product p2 = new Product(2,"Portronic", 25, "kolkata");
+		Product p3 = new Product(3,"Surfexcel", 30, "Pune");
+		Product p4 = new Product(4,"Yamha", 40, "Pune");
+		Product p5 = new Product(5,"Ikige", 50, "Pune");
+	}
+}

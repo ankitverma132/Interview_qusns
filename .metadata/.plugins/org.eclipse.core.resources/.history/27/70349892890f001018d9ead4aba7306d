@@ -1,9 +1,0 @@
-
-public class NumberOfVowels {
-//	Given a sentence, find the words with a specified number of vowels.
-//	No. of vowels : 2
-//
-//	String str = "I am learning Streams API in java";
-//	O/p: API Java
-
-}

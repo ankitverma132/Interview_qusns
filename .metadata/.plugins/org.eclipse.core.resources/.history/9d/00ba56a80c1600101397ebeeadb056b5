@@ -1,0 +1,9 @@
+
+public class OnlyDigit {
+
+	public static void main(String[] args) {
+		//  Find and print strings containing only digits.
+
+	}
+
+}

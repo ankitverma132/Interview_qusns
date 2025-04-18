@@ -1,0 +1,12 @@
+import java.util.Arrays;
+
+public class SortInAlphabateOrder {
+
+	public static void main(String[] args) {
+		// Sort a list of strings in alphabetical order 
+		
+		List<String>list = Arrays.asList("zudio", "puma", "addidas", "mac" );
+
+	}
+
+}

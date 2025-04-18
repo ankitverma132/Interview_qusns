@@ -1,0 +1,13 @@
+
+public class NumberSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+//		mapToInt() is used to convert objects within a stream into integers.
+//		This is particularly useful for transforming streams 
+//		where you need to perform numerical calculations or aggregate operations on integer values.
+	}
+
+}

@@ -1,0 +1,13 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class MultiplyArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer[] arr = {1,2,3,4,5};
+		List<integer> arrList = Arrays.asList(null)
+
+	}
+
+}

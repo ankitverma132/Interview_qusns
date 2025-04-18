@@ -1,0 +1,9 @@
+
+public class AverageOfList {
+
+	public static void main(String[] args) {
+		// 1 Calculate the average of all the numbers.
+
+	}
+
+}

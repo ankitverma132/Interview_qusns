@@ -1,0 +1,14 @@
+import java.util.List;
+
+class PersonObject2 {
+	String name;
+	List<String> city;
+}
+public class MapVsFlatMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,17 @@
+class PersonObject {
+	String name;
+	String city;
+	int age;
+	
+	
+}
+
+
+public class ObjectToMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

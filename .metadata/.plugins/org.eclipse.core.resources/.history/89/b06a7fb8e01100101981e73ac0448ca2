@@ -1,9 +1,0 @@
-
-public class OnlyInteger {
-	// Given a list of strings, create a list that contains only integers
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
-}

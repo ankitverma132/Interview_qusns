@@ -1,0 +1,9 @@
+
+public class GroupByFirstChar {
+
+	public static void main(String[] args) {
+		// Group list of strings by their first character and count the number of strings
+
+	}
+
+}

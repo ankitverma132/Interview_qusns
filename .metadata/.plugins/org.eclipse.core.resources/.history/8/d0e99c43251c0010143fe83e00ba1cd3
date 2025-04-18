@@ -1,0 +1,17 @@
+
+public class FetchPerson {
+
+	public static void main(String[] args) {
+		//Given list of persons,fetch list of names of person
+		// Whose age is greater then 30, name should be unique and in sorted order
+
+		PersonObject p1 = new PersonObject("amit", "Pune", 22);
+		PersonObject p2 = new PersonObject("sumit", "kolkata", 27);
+		PersonObject p3 = new PersonObject("lalit", "Pune", 23);
+		PersonObject p4 = new PersonObject("kapil", "Pune", 28);
+		PersonObject p5 = new PersonObject("Danish", "Pune", 28);
+		
+
+	}
+
+}

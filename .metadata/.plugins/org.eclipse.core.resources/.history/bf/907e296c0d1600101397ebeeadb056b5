@@ -1,0 +1,12 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class StringToUppercasee {
+
+	public static void main(String[] args) {
+		// Convert a list of strings to uppercase
+		List<String> list = Arrays.asList("abc","456", "1a2b3c", "123abc", "123");
+
+	}
+
+}
